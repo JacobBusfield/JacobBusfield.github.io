@@ -66,54 +66,49 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <div class="intro-text">
+        <div class="intro-text" id="mengTitle">
           <span class="name">Developing Epigenetic Networks to Optimise Traffic Control.</span>
         </div>
       </div>
     </header>
+    
 
   <!-- Summary Section -->
-    <section id="summary">
+    <section id="summary">   
       <div class="container">
-        <h2>Summary</h2>
-        <hr class="star-primary">
-        <p>
-        Traffic congestion continues to rise costing local economies substantially. Where road capacity
-        cannot be physically increased, through new road infrastructure, implementation of more
-        intelligent, adaptive traffic control schemes exists as the likely alternative. However, current
-        versions of these controllers tend to be centralised and thus expensive, unreliable and difficult
-        to scale. Traffic controllers which seek to mimic biological structures, and hence capture their
-        advantages of adaptability, scalability and fault-tolerance, have been previously attempted
-        but with limited success. <br/><br/>
-
-        The project undertaken details epiNet, a computational model able to perform dynamic topological
-        changes, and investigates its effectiveness when implemented as a decentralised, adaptive
-        traffic controller. This is attempted through construction of an agent-based simulation to
-        assess the controller's performance, and evolutionary algorithms which iteratively adapt them
-        to specific, simulated traffic environments.<br/><br/>
-        </p>
-      </div>
-    
-      <div class="container">
-        <hr class="featurette-divider">
         <div class="row featurette">
-          <div class="col-md-7">
-            <h3>Fast.<span class="text-muted"> Improved Journey Times.</span></h3>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <div class="col-md-9">
+            <h3>Congestion.<span class="text-muted"> Of Growing Concern.</span></h3>
+            <p>
+            Traffic congestion continues to rise costing local economies
+            <a href="http://inrix.com/press/traffic-congestion-to-cost-the-uk-economy-more-than-300-billion-over-the-next-16-years/"> substantially</a>. 
+            Where road capacity
+            cannot be physically increased, through new road infrastructure, implementation of more
+            intelligent, adaptive traffic control schemes exists as the likely alternative. However, current
+            versions of these controllers tend to be centralised and thus expensive, unreliable and difficult
+            to scale.
+            </p>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="img/MEng/oneroad.png" alt="Generic placeholder image">
+          <div class="col-md-3">
+            <img class="featurette-image img-responsive center-block" src="https://upload.wikimedia.org/wikipedia/commons/8/86/DVP_Congestion.png" alt="Generic placeholder image">
           </div>
         </div>
-
+      
         <hr class="featurette-divider">
-
         <div class="row featurette">
-          <div class="col-md-7 col-md-push-5">
-            <h3>Intelligent.<span class="text-muted"> Complex Control.</span></h3>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <div class="col-md-8 col-md-push-4">
+            <h3>EpiNet.<span class="text-muted"> Nature's Answer.</span></h3>
+            <p>
+            Traffic controllers which seek to mimic biological structures, and hence capture their
+            advantages of adaptability, scalability and fault-tolerance, have been previously attempted
+            but with limited success. The project undertaken details
+            <a href="http://eprints.whiterose.ac.uk/93468/1/Turner_et_al_ArtificialEpigeneticNetworks_TNNLS.pdf"> epiNet</a>, 
+            a computational model able to perform dynamic topological
+            changes, and investigates its effectiveness when implemented as a decentralised, adaptive
+            traffic controller. The program is based on epigenetics: the study of changes in organisms caused by modification of gene expression rather than alteration of the genetic code itself.
+            </p>
           </div>
-          <div class="col-md-4 col-md-pull-7">
+          <div class="col-md-4 col-md-pull-8">
             <img class="featurette-image img-responsive center-block" src="img/MEng/refspace.png" alt="Generic placeholder image">
           </div>
         </div>
@@ -121,15 +116,60 @@
         <hr class="featurette-divider">
         
         <div class="row featurette">
-          <div class="col-md-7">
-            <h3>Fault Tolerant.<span class="text-muted"> Dynamic Behaviour.</span></h3>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <div class="col-md-8">
+            <h3>Simulation.<span class="text-muted"> A Starting Point.</span></h3>
+            <p>
+            An agent-based traffic simulation models every car (agent) as it travels through a virtual
+            road environment and reacts with roads, traffic lights and other cars. These simulations
+            seek to stress the control scheme with both levels and directions of traffic to determine the
+            strengths and weaknesses of it. Visuals provide real-time observation of traffic allowing them to be
+            easily debugged, demonstrated and behaviour inferred.
+            </p>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="img/MEng/synthesis.png" alt="Generic placeholder image">
+          <div class="col-md-4">
+            <img class="featurette-image img-responsive center-block" src="img/MEng/simdesign.png" alt="Generic placeholder image">
           </div>
         </div>
+        
         <hr class="featurette-divider">
+        
+        <div class="row featurette">
+          <div class="col-md-8 col-md-push-4">
+            <h3>Evolution.<span class="text-muted"> Intelligent-ish.</span></h3>
+            <p>
+            Evolutionary algorithms (EAs) are essentially optimisers which look to, by trial and error, find a set of inputs
+          which produce the most ideal behaviour within a system or function. Their name stems from
+          the parallelisms that can be drawn to Darwinian evolution. A set of solutions, or population,
+          is maintained with operations, mimicing genetic changes, applied randomly. The fittest indivuals
+          survive iteralively improving the population. Networks of epiNet-based
+          traffic controllers were evolved using complex approaches including
+          heirachy, co-evolution and neighbourhoods
+          </div>
+          <div class="col-md-4 col-md-pull-8">
+            <img class="featurette-image img-responsive center-block" src="img/MEng/ea.png" alt="Generic placeholder image">
+          </div>
+        </div>
+        
+        <hr class="featurette-divider">
+      
+        <div class="row featurette">
+          <div class="col-md-6">
+            <h3>It Works.<span class="text-muted"> Considerably.</span></h3>
+            <p>
+            There are no quantative answers without lengthly context (see thesis in links below) 
+            so to quote the proven hypothesis: implementing epiNet as an adaptive traffic controller reduces congestion within
+a traffic network as it inherits useful biological traits including robustness,
+adaptability and fault tolerance. And: applying a genetic algorithm to evolve a single instance of epiNet in a network
+limits the performance of the program compared to using a method that allows
+individuals to apply evolutionary pressure upon one another.
+
+
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img class="featurette-image img-responsive center-block" src="img/MEng/oneroad.png" alt="Generic placeholder image">
+          </div>
+        </div>
       </div>
     </section>
     
@@ -175,7 +215,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Updated: 17/09/2016
+                        Updated: 18/10/2016
                     </div>
                 </div>
             </div>
@@ -200,21 +240,16 @@
           </div>
         </div>
         <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="modal-body">
-                <h2>Slides</h2>
-                <hr class="star-primary">
-                <object data="pdf/MEngSlides.pdf" type="application/pdf" width="100%" height="800px"> 
-                  <p>
-                  It appears you don't have a PDF plugin for this browser.
-                  No biggie... you can  
-                  <a href="pdf/MEngSlides.pdf"> click here to download the PDF file.</a>
-                  </p>  
-                </object>
-                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-              </div>
-            </div>
+          <div class="modal-body">
+            <h2>Slides</h2>
+            <object data="pdf/MEngSlides.pdf" type="application/pdf" width="100%" height="800px"> 
+              <p>
+              It appears you don't have a PDF plugin for this browser.
+              No biggie... you can  
+              <a href="pdf/MEngSlides.pdf"> click here to download the PDF file.</a>
+              </p>  
+            </object>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
         </div>
       </div>
@@ -231,21 +266,16 @@
           </div>
         </div>
         <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="modal-body">
-                <h2>Thesis</h2>
-                <hr class="star-primary">
-                <object data="pdf/Thesis.pdf" type="application/pdf" width="100%" height="800px"> 
-                  <p>
-                  It appears you don't have a PDF plugin for this browser.
-                  No biggie... you can  
-                  <a href="pdf/Thesis.pdf"> click here to download the PDF file.</a>
-                  </p>  
-                </object>
-                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-              </div>
-            </div>
+          <div class="modal-body">
+            <h2>Thesis</h2>
+            <object data="pdf/Thesis.pdf" type="application/pdf" width="100%" height="800px"> 
+              <p>
+              It appears you don't have a PDF plugin for this browser.
+              No biggie... you can  
+              <a href="pdf/Thesis.pdf"> click here to download the PDF file.</a>
+              </p>  
+            </object>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
           </div>
         </div>
       </div>
