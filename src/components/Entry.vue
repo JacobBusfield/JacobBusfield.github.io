@@ -11,7 +11,7 @@
         </v-card>
       </v-flex>
 
-      <v-flex :style="{background: $vuetify.theme.themes.light.accent}" style="border-radius: 10px;">
+      <v-flex :style="{background: $vuetify.theme.themes.light.accent}" style="border-radius: 0 10px 10px 0;">
         <v-container>
           <div class="primary--text" style="font-size:24px; font-weight: 500;">
             {{title}}
