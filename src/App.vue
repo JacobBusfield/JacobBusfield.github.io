@@ -1,9 +1,10 @@
 <template>
   <v-app>
     <v-app-bar app dark color='primary'>
-      <v-btn @click='$router.push("/")' text>
+      <v-btn @click='() => { if ($route.path !== "/"){$router.push("/")}}' text>
         <v-img height="48" width="48" contain :src="require('./assets/logo.svg')"></v-img>
-        <span style="font-size:20px; text-transform: capitalize; font-weight: 400; margin-left: 20px;">
+        <span class="accent--text"
+          style="font-size:20px; text-transform: capitalize; font-weight: 400; margin-left: 20px;">
           Jacob Busfield
         </span>
       </v-btn>
@@ -11,12 +12,12 @@
       <v-spacer></v-spacer>
 
       <div v-if="$vuetify.breakpoint.mdAndUp">
-        <v-btn v-for='link in links' :key='link.name' :to='link.url' text>
+        <v-btn class="accent--text" v-for='link in links' :key='link.name' :to='link.url' text>
           <span>{{link.name}}</span>
         </v-btn>
       </div>
 
-      <v-btn v-else text @click.stop="drawer = !drawer">
+      <v-btn class="accent--text" v-else text @click.stop="drawer = !drawer">
         <v-icon style="font-size:24pt">
           mdi-menu
         </v-icon>
