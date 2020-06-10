@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row class='text-center'>
       About Page
     </v-row>
   </v-container>
@@ -9,5 +9,5 @@
 <script>
   export default {
     name: 'About',
-  }
+  };
 </script>
