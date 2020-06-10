@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app dark color='primary'>
       <v-btn @click='$router.push("/")' text>
-        <v-img height="48" width="48" contain :src="logo"></v-img>
+        <v-img height="48" width="48" contain :src="require('./assets/logo.svg')"></v-img>
         <span style="font-size:20px; text-transform: capitalize; font-weight: 400; margin-left: 20px;">
           Jacob Busfield
         </span>
@@ -42,13 +42,11 @@
 
 <script lang='ts'>
   import Vue from 'vue';
-  import logo from './assets/logo.svg';
 
   export default Vue.extend({
     name: 'App',
 
     data: () => ({
-      logo,
       drawer: false,
       links: [{
           name: 'Home',
