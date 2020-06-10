@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class='text-center'>
-      About Page
+      About Page...
     </v-row>
   </v-container>
 </template>
