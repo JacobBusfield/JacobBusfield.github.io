@@ -13,6 +13,7 @@ export default new Vuetify({
         // error: colors.red.accent3,
       },
       dark: {
+        // primary: '#2962FF',
         // primary: colors.blue.lighten3,
       },
     },

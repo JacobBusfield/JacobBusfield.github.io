@@ -1,16 +1,38 @@
 <template>
   <v-app>
-    <v-app-bar app color='primary' dark>
+    <v-app-bar app dark color='primary'>
       <v-btn @click='$router.push("/")' text>
-        Jacob's Site Under Construction
+        <v-img height="48" width="48" contain :src="logo"></v-img>
+        <span style="font-size:20px; text-transform: capitalize; font-weight: 400; margin-left: 20px;">
+          Jacob Busfield
+        </span>
       </v-btn>
 
       <v-spacer></v-spacer>
 
-      <v-btn v-for='link in links' :key='link.name' :to='link.url' text>
-        <span>{{link.name}}</span>
+      <div v-if="$vuetify.breakpoint.mdAndUp">
+        <v-btn v-for='link in links' :key='link.name' :to='link.url' text>
+          <span>{{link.name}}</span>
+        </v-btn>
+      </div>
+
+      <v-btn v-else text @click.stop="drawer = !drawer">
+        <v-icon style="font-size:24pt">
+          mdi-menu
+        </v-icon>
       </v-btn>
+
     </v-app-bar>
+
+    <v-navigation-drawer dark color='primary' v-model="drawer" absolute temporary>
+      <v-list>
+        <v-list-item v-for="link in links" :key="link.name" link :to="link.url">
+          <v-list-item-content>
+            <v-list-item-title class="white--text">{{ link.name }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
     <v-content>
       <router-view></router-view>
@@ -20,11 +42,14 @@
 
 <script lang='ts'>
   import Vue from 'vue';
+  import logo from './assets/logo.svg';
 
   export default Vue.extend({
     name: 'App',
 
     data: () => ({
+      logo,
+      drawer: false,
       links: [{
           name: 'Home',
           url: '/',
