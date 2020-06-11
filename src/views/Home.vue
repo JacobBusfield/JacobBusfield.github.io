@@ -8,7 +8,8 @@
       Welcome to my blog:
     </div>
 
-    <Entry title='A Card Game' :img='require("@/assets/cards.svg")'>
+    <Entry title='Battle Cards' :img='require("@/assets/cards.svg")'
+      link='https://jacobbusfield.github.io/BattleCards/'>
       This is a description. With <span style='font-weight:bold'>peerjs</span> and <span
         style='font-weight:bold'>dynamoDB</span>. This is a work in progress!
     </Entry>

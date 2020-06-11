@@ -2,7 +2,8 @@
   <v-hover v-slot:default="{ hover }">
     <v-card class="entryCard" :elevation="hover ? 12 : 2"
       :style="{'margin-top' : ($vuetify.breakpoint.smAndDown) ? '15px' : '50px'}"
-      style="margin-top:50px; border-radius: 10px; cursor: pointer;">
+      style="margin-top:50px; border-radius: 10px; cursor: pointer;"
+      href="https://jacobbusfield.github.io/BattleCards/">
       <v-layout>
 
         <v-flex shrink>
@@ -44,6 +45,11 @@
         required: true,
         type: String,
       },
+      link: {
+        required: false,
+        type: String,
+        default: "",
+      }
     },
   });
 </script>
